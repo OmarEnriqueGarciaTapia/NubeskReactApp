@@ -1,11 +1,10 @@
 import {
-  colors,
-  shadows
+  colors
 } from '../../styles';
 
 const styles = {
   root: {
-    width: '75%',
+    width: '90%',
     margin: '0 auto',
     height: '80vh',
     display: 'flex',
@@ -21,15 +20,10 @@ const styles = {
   box: {
     extend: 'flex',
     width: '100%',
+    border: `1px solid ${colors().solid.primary}`,
     borderRadius: 10,
     backgroundColor: colors().solid.secondary,
-    '& span': {
-      padding: 10,
-      height: "auto",
-      textAlign: 'center'
-    },
     '& div': {
-      width: '100%',
       alignItems: 'center'
     },
   },
@@ -57,20 +51,25 @@ const styles = {
     justifyContent: 'space-around'
   },
   questionBoxCenter: {
-    extend: 'flex',
-    height: '16vh',
+    display: 'flex',
+    height: '20vh',
+    borderBottom: `1px solid ${colors().solid.primary}`,
+    paddingLeft: '1em',
+    paddingRight: '1em',
+    overflowY: 'auto',
     justifyContent: 'center',
   },
   questionBoxFooter: {
     extend: 'flex',
-    height: '16vh',
+    height: '20vh',
     justifyContent: 'center',
     backgroundColor: colors().solid.blue,
     borderRadius: 0
   },
   nextButton: {
     width: '100%',
-    height: '16vh',
+    height: '8vh',
+    color: colors().solid.secondary,
     backgroundColor: colors().solid.green
   }
 };

@@ -1,5 +1,12 @@
 import { colors, gradients } from "../../styles";
 
+const text = {
+  textAlign: 'center',
+  textDecoration: "none",
+  fontSize: "1em",
+  color: colors().solid.primary
+};
+
 const globalStyles = {
   "@global": {
     "@font-face": [
@@ -14,21 +21,17 @@ const globalStyles = {
       filter: gradients().purpleDiagonal.filter,
     },
     a: {
-      color: colors().solid.primary,
-      textDecoration: "none",
-      fontSize: "xx-large"
+      extend: [text],
     },
     p: {
-      color: colors().solid.primary,
-      fontSize: "xx-large"
+      extend: [text],
+      fontSize: "0.75em"
     },
     span: {
-      color: colors().solid.primary,
-      fontSize: "xx-large"
+      extend: [text],
     },
     h1: {
-      color: colors().solid.primary,
-      fontSize: "1.25em"
+      extend: [text],
     }
   }
 };
@@ -46,7 +49,8 @@ const styles = {
 };
 
 const mobileStyles = {
-  "@media (max-width: 1024px)": {}
+  "@media (max-width: 1024px)": {
+  }
 };
 
 export default {

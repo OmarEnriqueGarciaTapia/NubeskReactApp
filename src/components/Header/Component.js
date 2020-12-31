@@ -4,11 +4,13 @@ import PropTypes from "prop-types";
 /** Local */
 import WithJss from "../../hocs/WithJss";
 import styles from "./styles";
+import logo from '../../resources/media/logo.png';
 
 const Component = ({ classes }) => {
   return (
     <div className={classes.root}>
-      <span>Header</span>
+      <img src={logo} className="logo" alt="logo" />
+      <span>Trivia App</span>
     </div>
   );
 }

@@ -28,14 +28,14 @@ const Component = ({ classes }) => {
           </span>
         </div>
         <div className={classes.questionBoxCenter}>
-          <span>
-            Question / Answer
-          </span>
+          <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacinia tincidunt elit lacinia tempus.
+         </p>
         </div>
         <div className={classes.questionBoxFooter}>
-          <span>
+          <p>
             Answer / Question
-          </span>
+          </p>
         </div>
       </div>
       <button className={classes.nextButton} >
