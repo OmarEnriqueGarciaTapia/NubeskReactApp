@@ -1,4 +1,4 @@
-import { gradients } from "../../styles";
+import { colors, gradients } from "../../styles";
 
 const globalStyles = {
   "@global": {
@@ -14,17 +14,20 @@ const globalStyles = {
       filter: gradients().purpleDiagonal.filter,
     },
     a: {
-      color: "#1896BD",
+      color: colors().solid.primary,
       textDecoration: "none",
-      fontSize: "1em"
+      fontSize: "xx-large"
     },
     p: {
-      fontSize: "1em"
+      color: colors().solid.primary,
+      fontSize: "xx-large"
     },
     span: {
-      fontSize: "1em"
+      color: colors().solid.primary,
+      fontSize: "xx-large"
     },
     h1: {
+      color: colors().solid.primary,
       fontSize: "1.25em"
     }
   }
@@ -36,7 +39,9 @@ const styles = {
     fontFamily: "Roboto",
     display: "flex",
     flexDirection: "column",
-    backgroudColor: "grey"
+    justifyContent: "space-between",
+    backgroudColor: "grey",
+    height: "100vh"
   }
 };
 

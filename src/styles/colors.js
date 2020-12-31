@@ -4,7 +4,8 @@ const colors = () => {
       primary: "#f8f9fa",
       secondary: "#343a40",
       pink: "#764ca2",
-      blue: "#677dea"
+      blue: "#677dea",
+      green: "#ACEB60"
     }
   };
 };

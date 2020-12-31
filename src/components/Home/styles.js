@@ -8,10 +8,13 @@ const styles = {
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    borderTop: "1px solid grey",
-    color: colors().solid.primary,
-    backgroundColor: colors().solid.secondary,
-    boxShadow: shadows("white").bottom
+  },
+  startGameButton: {
+    width: "100%",
+    height: "50vh",
+    fontSize: "xx-large",
+    backgroundColor: colors().solid.blue,
+    borderRadiud: 5
   }
 };
 

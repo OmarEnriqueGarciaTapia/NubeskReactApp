@@ -3,7 +3,7 @@ import { colors, shadows } from "../../styles";
 const styles = {
   root: {
     width: "100%",
-    height: "auto",
+    height: "10vh",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",

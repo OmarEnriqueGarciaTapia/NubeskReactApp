@@ -8,7 +8,11 @@ import styles from "./styles";
 const Component = ({ classes }) => {
   return (
     <div className={classes.root}>
-      <span>Home</span>
+      <button className={classes.startGameButton} >
+        <span>
+          Start Game
+        </span>
+      </button>
     </div>
   );
 }
