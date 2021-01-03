@@ -3,7 +3,7 @@ import { LOAD_TRIVIA, RENDER_TRIVIA } from '../actions';
 
 export function* fetchLoadTrivia() {
   const apiPath = '/random'
-  const endpoint = `http://jservice.io/api${apiPath}`;
+  const endpoint = `https://jservice.io/api${apiPath}`;
   const response = yield call(fetch, endpoint);
   const data = yield response.json();
   yield put({ type: RENDER_TRIVIA, payload: data });
