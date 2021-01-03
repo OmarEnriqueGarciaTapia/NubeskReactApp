@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import {
-  SET_UI,
-  RENDER_TRIVIA
+  RENDER_TRIVIA,
+  LOAD_TRIVIA
 } from '../actions';
 
 const initialState = {
@@ -13,14 +13,20 @@ function trivia(state = initialState, action) {
     case RENDER_TRIVIA:
       return {
         ...state,
+        loading: false,
         answer: payload[0].answer,
         question: payload[0].question,
         value: payload[0].value,
         airdate: payload[0].airdate,
         category: payload[0].category.title,
       }
-      default:
-      return state
+    case LOAD_TRIVIA:
+      return {
+        ...state,
+        loading: true
+      }
+    default:
+    return state
   }
 }
 

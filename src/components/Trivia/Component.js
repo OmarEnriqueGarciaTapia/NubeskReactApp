@@ -9,6 +9,7 @@ import { connect } from "react-redux";
 import { loadTrivia as loadTriviaAction } from "../../store/actions";
 
 /** Local */
+import Loading from "../Loading";
 import WithJss from "../../hocs/WithJss";
 import styles from "./styles";
 
@@ -17,6 +18,7 @@ const Component = (props) => {
   const {
     classes,
     loadTrivia,
+    loading,
     answer,
     question,
     value,
@@ -61,58 +63,66 @@ const Component = (props) => {
 
   return (
     <div className={classes.root}>
-      <div className={classes.burnedQuestionsBox}>
-        <span>
-          { `BURNED QUESTIONS: "${burnedQuestions}"` }
-        </span>
-      </div>
-      <div className={classes.categoryBox}>
-        <span>
-          { `CATEGORY: "${category}"` }
-        </span>
-      </div>
-      <div className={classes.questionBox}>
-        <div className={classes.questionBoxHeader}>
-          <span>
-            { `AIR DATE: "${ dateFormat(airdate, "shortDate") }"` }
-          </span>
-          <span>
-            { `POINTS: "${ value }"` }
-          </span>
-        </div>
-        <div className={classes.questionBoxInfo}>
-          {
-            revealResponse ? (
-              <p>
-                { `ANSWER: "${answer}"` }
-              </p>
-            ) : (
-              <p>
-                { `QUESTION: "${question}"` }
-              </p>
-            )
-          }
-          
-        </div>
-        <div className={classNameQuestionBoxChangeInfo} onClick={() => setRevealResponse(!revealResponse)}>
-          {
-            revealResponse ? (
+      {
+        !loading ? (
+          <>
+          <div className={classes.burnedQuestionsBox}>
               <span>
-                REVEAL QUESTION
+                { `BURNED QUESTIONS: "${burnedQuestions}"` }
               </span>
-            ) : (
+            </div>
+            <div className={classes.categoryBox}>
               <span>
-                REVEAL ANSWER
+                { `CATEGORY: "${category}"` }
               </span>
-            )
-          }
-        </div>
-      </div>
-      <button className={classNameNextButton} onClick={handleNextQuestion} disabled={!revealResponse}>
-        <span>
-          NEXT QUESTION
-        </span>
-      </button>
+            </div>
+            <div className={classes.questionBox}>
+              <div className={classes.questionBoxHeader}>
+                <span>
+                  { `AIR DATE: "${ dateFormat(airdate, "shortDate") }"` }
+                </span>
+                <span>
+                  { `POINTS: "${ value }"` }
+                </span>
+              </div>
+              <div className={classes.questionBoxInfo}>
+                {
+                  revealResponse ? (
+                    <p>
+                      { `ANSWER: "${answer}"` }
+                    </p>
+                  ) : (
+                    <p>
+                      { `QUESTION: "${question}"` }
+                    </p>
+                  )
+                }
+                
+              </div>
+              <div className={classNameQuestionBoxChangeInfo} onClick={() => setRevealResponse(!revealResponse)}>
+                {
+                  revealResponse ? (
+                    <span>
+                      REVEAL QUESTION
+                    </span>
+                  ) : (
+                    <span>
+                      REVEAL ANSWER
+                    </span>
+                  )
+                }
+              </div>
+            </div>
+            <button className={classNameNextButton} onClick={handleNextQuestion} disabled={!revealResponse}>
+              <span>
+                NEXT QUESTION
+              </span>
+            </button>
+          </>
+        ) : (
+          <Loading />
+        )
+      }
     </div>
   );
 }
@@ -131,6 +141,7 @@ const propTypes = {
 const defaultProps = {
   classes: {},
   loadTrivia: null,
+  loading: true,
   answer: '',
   question: '',
   value: 0,
@@ -142,6 +153,7 @@ Component.propTypes = propTypes;
 Component.defaultProps = defaultProps;
 
 const mapStateToProps = state => ({
+  loading: state.trivia.loading,
   answer: state.trivia.answer,
   question: state.trivia.question,
   value: state.trivia.value,

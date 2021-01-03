@@ -30,30 +30,30 @@ const styles = {
   },
   burnedQuestionsBox: {
     extend: 'box',
-    height: '8vh'
+    height: '6vh'
   },
   categoryBox: {
     extend: 'box',
-    height: '8vh'
+    height: '6vh'
   },
   questionBox: {
     extend: 'box',
     width: '100%',
-    height: '40vh',
+    height: '46vh',
     justifyContent: 'space-between',
     borderBottomLeftRadius: 0,
     borderBottomRightRadius: 0
   },
   questionBoxHeader: {
     extend: 'flex',
-    height: '8vh',
+    height: '6vh',
     borderBottom: `1px solid ${colors().solid.primary}`,
     flexDirection: "row",
     justifyContent: 'space-around'
   },
   questionBoxInfo: {
     display: 'flex',
-    height: '36vh',
+    height: '34vh',
     borderBottom: `1px solid ${colors().solid.primary}`,
     paddingLeft: '1em',
     paddingRight: '1em',
@@ -63,7 +63,7 @@ const styles = {
   questionBoxChangeInfo: {
     extend: 'flex',
     transition: 'all 0.5s',
-    height: '8vh',
+    height: '6vh',
     justifyContent: 'center',
     backgroundColor: colors().solid.blue_02,
     borderRadius: 0,
@@ -76,7 +76,7 @@ const styles = {
   nextButton: {
     transition: 'all 1s',
     width: '100%',
-    height: '8vh',
+    height: '6vh',
     cursor: 'pointer',
     color: colors().solid.secondary,
     backgroundColor: colors().solid.green

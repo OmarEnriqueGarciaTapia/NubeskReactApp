@@ -25,7 +25,7 @@ const globalStyles = {
     },
     p: {
       extend: [text],
-      fontSize: '0.75em'
+      fontSize: '0.80em'
     },
     span: {
       extend: [text],
