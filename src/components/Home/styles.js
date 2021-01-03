@@ -1,6 +1,6 @@
-import { colors, shadows } from "../../styles";
+import { colors } from "../../styles";
 
-const styles = {
+const defaultStyles = {
   root: {
     width: "100%",
     height: "auto",
@@ -10,7 +10,7 @@ const styles = {
     justifyContent: "center",
   },
   startGameButton: {
-    width: "100%",
+    width: "80%",
     height: "50vh",
     fontSize: "xx-large",
     backgroundColor: colors().solid.blue,
@@ -23,4 +23,6 @@ const mobileStyles = {
   }
 };
 
-export default { ...styles, ...mobileStyles };
+const styles = { ...defaultStyles, ...mobileStyles }
+
+export default styles;

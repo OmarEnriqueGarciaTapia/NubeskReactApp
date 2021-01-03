@@ -1,18 +1,18 @@
-import { colors, gradients } from "../../styles";
+import { colors, gradients } from '../../styles';
 
 const text = {
   textAlign: 'center',
-  textDecoration: "none",
-  fontSize: "1em",
-  color: colors().solid.primary
+  textDecoration: 'none',
+  fontSize: '1em',
+  fontWeight: 'bold'
 };
 
 const globalStyles = {
-  "@global": {
-    "@font-face": [
+  '@global': {
+    '@font-face': [
       {
-        fontFamily: "Roboto",
-        src: "url(/fonts/Roboto/Roboto-Regular.ttf)"
+        fontFamily: 'Roboto',
+        src: 'url(/fonts/Roboto/Roboto-Regular.ttf)'
       }
     ],
     body: {
@@ -25,7 +25,7 @@ const globalStyles = {
     },
     p: {
       extend: [text],
-      fontSize: "0.75em"
+      fontSize: '0.75em'
     },
     span: {
       extend: [text],
@@ -38,18 +38,18 @@ const globalStyles = {
 
 const styles = {
   root: {
-    width: "100%",
-    fontFamily: "Roboto",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-between",
-    backgroudColor: "grey",
-    height: "100vh"
+    width: '100%',
+    fontFamily: 'Roboto',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    backgroudColor: 'grey',
+    height: '100vh'
   }
 };
 
 const mobileStyles = {
-  "@media (max-width: 1024px)": {
+  '@media (max-width: 1024px)': {
   }
 };
 

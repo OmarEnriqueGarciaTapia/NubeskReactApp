@@ -1,14 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { useHistory } from "react-router-dom";
 
 /** Local */
 import WithJss from "../../hocs/WithJss";
 import styles from "./styles";
 
+
 const Component = ({ classes }) => {
+let history = useHistory();
   return (
     <div className={classes.root}>
-      <button className={classes.startGameButton} >
+      <button className={classes.startGameButton} onClick={ () => history.push('/trivia') } >
         <span>
           Start Game
         </span>

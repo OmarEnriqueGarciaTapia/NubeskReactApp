@@ -14,7 +14,7 @@ const WithJss = styles => Component => {
   });
   styleSheet.attach();
 
-  return withStyles({ themed: { color: 'red' }}, {
+  return withStyles({}, {
     index: 1,
   })(
     ({

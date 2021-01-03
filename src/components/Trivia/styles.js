@@ -22,6 +22,7 @@ const styles = {
     width: '100%',
     border: `1px solid ${colors().solid.primary}`,
     borderRadius: 10,
+    color: colors().solid.primary,
     backgroundColor: colors().solid.secondary,
     '& div': {
       alignItems: 'center'
@@ -50,27 +51,39 @@ const styles = {
     flexDirection: "row",
     justifyContent: 'space-around'
   },
-  questionBoxCenter: {
+  questionBoxInfo: {
     display: 'flex',
-    height: '20vh',
+    height: '36vh',
     borderBottom: `1px solid ${colors().solid.primary}`,
     paddingLeft: '1em',
     paddingRight: '1em',
     overflowY: 'auto',
     justifyContent: 'center',
   },
-  questionBoxFooter: {
+  questionBoxChangeInfo: {
     extend: 'flex',
-    height: '20vh',
+    transition: 'all 0.5s',
+    height: '8vh',
     justifyContent: 'center',
-    backgroundColor: colors().solid.blue,
-    borderRadius: 0
+    backgroundColor: colors().solid.blue_02,
+    borderRadius: 0,
+    cursor: 'pointer'
+  },
+  questionBoxChangeInfoAnswer: {
+    color: colors().solid.secondary,
+    backgroundColor: colors().solid.yellow
   },
   nextButton: {
+    transition: 'all 1s',
     width: '100%',
     height: '8vh',
+    cursor: 'pointer',
     color: colors().solid.secondary,
     backgroundColor: colors().solid.green
+  },
+  nextButtonDisabled: {
+    color: colors().solid.primary,
+    backgroundColor: colors().solid.grey
   }
 };
 
