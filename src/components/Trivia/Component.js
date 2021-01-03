@@ -21,7 +21,7 @@ const Component = (props) => {
     loading,
     answer,
     question,
-    value,
+    difficulty,
     airdate,
     category
   } = props;
@@ -82,7 +82,7 @@ const Component = (props) => {
                   { `AIR DATE: ${ dateFormat(airdate, "shortDate") }` }
                 </span>
                 <span>
-                  { `POINTS: ${ value }` }
+                  { `DIFFICULTY: ${ difficulty }` }
                 </span>
               </div>
               <div className={classes.questionBoxInfo}>
@@ -137,7 +137,7 @@ const propTypes = {
   loadTrivia: PropTypes.func,
   answer: PropTypes.string,
   question: PropTypes.string,
-  value: PropTypes.number,
+  difficulty: PropTypes.number,
   airdate: PropTypes.string,
   category: PropTypes.string
 };
@@ -148,7 +148,7 @@ const defaultProps = {
   loading: true,
   answer: '',
   question: '',
-  value: 0,
+  difficulty: 0,
   airdate: '',
   category: ''
 };
@@ -160,7 +160,7 @@ const mapStateToProps = state => ({
   loading: state.trivia.loading,
   answer: state.trivia.answer,
   question: state.trivia.question,
-  value: state.trivia.value,
+  difficulty: state.trivia.difficulty,
   airdate: state.trivia.airdate,
   category: state.trivia.category
 });

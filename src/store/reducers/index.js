@@ -16,7 +16,7 @@ function trivia(state = initialState, action) {
         loading: false,
         answer: payload[0].answer,
         question: payload[0].question,
-        value: payload[0].value,
+        difficulty: payload[0].value,
         airdate: payload[0].airdate,
         category: payload[0].category.title,
       }
