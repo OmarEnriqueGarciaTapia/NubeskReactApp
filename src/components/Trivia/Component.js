@@ -68,32 +68,36 @@ const Component = (props) => {
           <>
           <div className={classes.burnedQuestionsBox}>
               <span>
-                { `BURNED QUESTIONS: "${burnedQuestions}"` }
+                { `BURNED QUESTIONS: ${burnedQuestions}` }
               </span>
             </div>
             <div className={classes.categoryBox}>
               <span>
-                { `CATEGORY: "${category}"` }
+                { `CATEGORY: ${category}` }
               </span>
             </div>
             <div className={classes.questionBox}>
               <div className={classes.questionBoxHeader}>
                 <span>
-                  { `AIR DATE: "${ dateFormat(airdate, "shortDate") }"` }
+                  { `AIR DATE: ${ dateFormat(airdate, "shortDate") }` }
                 </span>
                 <span>
-                  { `POINTS: "${ value }"` }
+                  { `POINTS: ${ value }` }
                 </span>
               </div>
               <div className={classes.questionBoxInfo}>
                 {
                   revealResponse ? (
-                    <p>
-                      { `ANSWER: "${answer}"` }
-                    </p>
+                    <span>
+                      ANSWER:
+                      <br/>
+                      {answer}
+                    </span>
                   ) : (
                     <p>
-                      { `QUESTION: "${question}"` }
+                      QUESTION:
+                      <br/>
+                      {question}
                     </p>
                   )
                 }

@@ -6,7 +6,7 @@ export function* fetchLoadTrivia() {
   const endpoint = `https://jservice.io/api${apiPath}`;
   const response = yield call(fetch, endpoint);
   const data = yield response.json();
-  yield delay(2000);
+  yield delay(1500);
   yield put({ type: RENDER_TRIVIA, payload: data });
 }
 

@@ -24,7 +24,7 @@ const defaultStyles = {
     animationName: '$Rotation',
     animationTimingFunction: 'linear',
     animationIterationCount: 'infinite',
-    animationDuration: '1s'
+    animationDuration: '0.75s'
   }
 };
 

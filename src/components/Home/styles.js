@@ -13,7 +13,8 @@ const defaultStyles = {
     width: "80%",
     height: "50vh",
     fontSize: "xx-large",
-    backgroundColor: colors().solid.blue,
+    color: colors().solid.secondary,
+    backgroundColor: colors().solid.green,
     borderRadiud: 5
   }
 };
