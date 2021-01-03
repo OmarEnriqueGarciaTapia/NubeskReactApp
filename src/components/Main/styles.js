@@ -2,7 +2,6 @@ import { colors, gradients } from '../../styles';
 
 const text = {
   textAlign: 'center',
-  textDecoration: 'none',
   fontSize: '1em',
   fontWeight: 'bold'
 };
@@ -22,6 +21,7 @@ const globalStyles = {
     },
     a: {
       extend: [text],
+      color: colors().solid.primary
     },
     p: {
       extend: [text],

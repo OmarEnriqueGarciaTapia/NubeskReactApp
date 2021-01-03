@@ -8,7 +8,7 @@ import styles from "./styles";
 const Component = ({ classes }) => {
   return (
     <div className={classes.root}>
-      <span>Footer</span>
+      <span>Developed by <a href="https://www.linkedin.com/in/ogarciatapia/" target="_blank">Omar Garcia</a></span>
     </div>
   );
 }
